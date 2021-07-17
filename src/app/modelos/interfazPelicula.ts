@@ -31,18 +31,4 @@ export interface Pelicula {
   Response: string;
 }
 
-/*
-export interface peliculaBusqueda {
-  Title: string;
-  Year: string;
-  imdbID: string;
-  Type: string;
-  Poster: string;
-}
 
-export interface Busqueda {
-  Search: peliculaBusqueda[];
-  totalResults: string;
-  Response: string;
-}
-*/
