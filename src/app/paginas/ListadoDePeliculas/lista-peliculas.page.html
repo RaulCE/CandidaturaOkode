@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ios title-default hydrated"> Peliculas</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-searchbar [(ngModel)]="miBusqueda" placeholder="Nombre de la pelicula" (keydown.enter)="getPeliculas()" (ionCancel)="limpiarBusqueda()" ></ion-searchbar>
+<ion-content>
+  <ion-list>
+    <ion-item class="item ios in-list ion-focusable hydrated item-label" *ngFor="let pelicula of peliculas.Search" [routerLink]="['/DetalleDePelicula/',pelicula.imdbID]">
+      <ion-thumbnail slot="start" class="ios hydrated">
+        <img [src]="pelicula.Poster"/>
+      </ion-thumbnail>
+      <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated" >
+        <h3>{{pelicula.Year}}</h3>
+        <h2>{{pelicula.Title}}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

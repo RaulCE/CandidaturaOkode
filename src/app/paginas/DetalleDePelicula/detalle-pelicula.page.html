@@ -1,0 +1,31 @@
+<ion-header translucent="" role="banner" class="ios header-ios header-translucent header-collapse-none header-translucent-ios hydrated"><!----><div class="header-background"></div>
+  <ion-toolbar class="toolbar-title-default ios in-toolbar hydrated">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ios title-default hydrated">{{pelicula.Title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen="" class="ios hydrated" >
+  <ion-card class="item ios in-list ion-focusable hydrated item-label" color="light" >
+    <div align="center">
+    <ion-card-header color="medium">
+      <ion-card-subtitle role="heading" aria-level="3" class="ion-inherit-color ios hydrated" >{{pelicula.Director}}</ion-card-subtitle>
+      <ion-card-title role="heading" aria-level="2" class="ion-inherit-color ios hydrated">{{pelicula.Title}}</ion-card-title>
+    </ion-card-header>
+      <br />
+      <img [src]="pelicula.Poster" >
+      <p>{{pelicula.Released}} | {{pelicula.Runtime}}</p>
+      <p>{{pelicula.Genre}} | {{pelicula.Language}}</p>
+    </div>
+    <ion-card-content class="ios card-content-ios hydrated">
+      <ion-item class="item ios in-list ion-focusable hydrated item-label">
+        {{pelicula.Plot}}
+      </ion-item>
+    </ion-card-content>
+    <ion-item class="item ios in-list ion-focusable hydrated item-label" color="dark" >
+      <ion-label >Puntuacion IMDB</ion-label>
+      <ion-badge color="success" slot="end" class="ion-color ion-color-warning ios hydrated">{{pelicula.imdbRating}}</ion-badge>
+    </ion-item>
+  </ion-card>
+</ion-content>
